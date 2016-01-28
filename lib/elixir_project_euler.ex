@@ -15,15 +15,24 @@ defmodule ProjectEuler do
            ProjectEuler.Prime.largest_prime_factor(600851475143))
   end
 
+  def p4_largest_palindrome_product() do
+    answer("4# Problem - Largest palindrome from product of two 3-digit number",
+           ProjectEuler.Misc.largest_palindrome_product(100, 999))
+  end
+
   defp answer(problem, ans) do
     IO.puts "=========================================================="
     IO.puts problem
     IO.puts ans
     IO.puts "=========================================================="
   end
+
+  def main(args) do
+    ProjectEuler.p1_multiples_of_3_and_5()
+    ProjectEuler.p2_even_fibonacci_numbers()
+    ProjectEuler.p3_largest_prime_factor()
+    ProjectEuler.p4_largest_palindrome_product()
+  end
 end
 
 
-ProjectEuler.p1_multiples_of_3_and_5()
-ProjectEuler.p2_even_fibonacci_numbers()
-ProjectEuler.p3_largest_prime_factor()
